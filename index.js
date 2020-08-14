@@ -40,7 +40,7 @@ const saveCachedNpm = npmCache => {
   console.log('saving NPM modules')
 
   return cache
-    .saveCache(npmCache.inputPaths, npmCache.primaryKey)
+    .saveCache(npmCache.inputPaths, npmCache.primaryKey + '-test-')
     .catch(err => {
       // don't throw an error if cache already exists, which may happen due to
       // race conditions
