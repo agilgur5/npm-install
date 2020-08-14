@@ -188,7 +188,7 @@ const installInOneFolder = ({ usePackageLock, workingDirectory }) => {
   }
 
   return api.utils.restoreCachedNpm(NPM_CACHE).then(npmCacheHit => {
-    console.log('npm cache hit', npmCacheHit)
+    console.log('::debug ::npm cache hit', npmCacheHit)
 
     return api.utils.install(opts).then(() => {
       if (npmCacheHit) {
